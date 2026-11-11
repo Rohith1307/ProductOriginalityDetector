@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Product Originality Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header container-fluid px-md-5">
+				<div class="branding-block">
+					<a class="navbar-brand" href="index.html">Product Originality Detector <span>using Blockchain</span></a>
+					<p class="tagline">Get a live snapshot of seller inventory with authenticity status.</p>
+				</div>
+				<div class="header-metrics">
+					<div class="status-pill status-pill--success">Data synced 30s ago</div>
+					<div class="status-pill">Monitored sellers: 42</div>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar" id="ftco-navbar">
+		    <div class="container-fluid px-md-5">
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav m-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			      	<li class="nav-item"><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+		        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+		          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+
+			<main class="main-content">
+				<section class="hero container-fluid px-md-5">
+					<div class="hero-content">
+						<p class="eyebrow">Seller inventory intelligence</p>
+						<h1>Track every product currently available across your seller network.</h1>
+						<p class="lead">Query by seller code to view product details, pricing, and blockchain status before validating transfers.</p>
+						<div class="hero-actions">
+							<a href="addProduct.html" class="btn-theme">Register more products</a>
+							<a href="seller.html" class="btn-theme btn-theme--ghost">Manage sellers</a>
+						</div>
+						<ul class="hero-metrics">
+							<li><span>1.9k</span>Products live</li>
+							<li><span>87%</span>Premium status</li>
+							<li><span>5</span>Alerts in review</li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<h3>Seller snapshot</h3>
+						<ul>
+							<li>
+								<strong>Top SKU</strong>
+								<p>See which product is selling fastest.</p>
+							</li>
+							<li>
+								<strong>Stock health</strong>
+								<p>Flags when quantities dip below target.</p>
+							</li>
+							<li>
+								<strong>Verification rate</strong>
+								<p>Monitor authenticity scans per seller.</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="feature-grid container-fluid px-md-5">
+					<div class="feature-card">
+						<span class="feature-icon fa fa-id-card"></span>
+						<h3>Add seller</h3>
+						<p>Invite a new partner before granting stock access.</p>
+						<a href="addSeller.html">Onboard now</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-random"></span>
+						<h3>Transfer inventory</h3>
+						<p>Send products directly from manufacturer dashboards.</p>
+						<a href="sellProductManufacturer.html">Create transfer</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-shopping-bag"></span>
+						<h3>Seller sales</h3>
+						<p>Check what consumers are purchasing.</p>
+						<a href="sellProductSeller.html">View POS</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-exclamation-triangle"></span>
+						<h3>Alerts</h3>
+						<p>Audit abnormal price or stock changes.</p>
+						<a href="seller.html">Open alerts</a>
+					</div>
+				</section>
+
+				<section class="form-panel container-fluid px-md-5">
+					<div class="glass-panel">
+						<h2 class="panel-title">Find products by seller</h2>
+						<p class="panel-subtitle">Enter a seller code to pull their current catalog.</p>
+						<div class="form-table">
+							<table>
+								<tr>
+									<td><label for="sellerCode">Seller Code</label></td>
+									<td><input type="text" class="form-control" id="sellerCode" placeholder="Enter Seller Code" name="sellerCode"></td>
+								</tr>
+							</table>
+						</div>
+						<div class="form-actions text-center">
+							<button type="submit" class="btn btn-warning btn-register" id="register">Submit</button>
+						</div>
+					</div>
+					<div class="glass-panel">
+						<h2 class="panel-title">Product details</h2>
+						<p class="panel-subtitle">Results stream in as soon as the network responds.</p>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Product ID</th>
+										<th>Serial Number</th>
+										<th>Name</th>
+										<th>Brand</th>
+										<th>Price</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody id="logdata"></tbody>
+							</table>
+						</div>
+						<p class="text-center">Your address is <b id="add"></b></p>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p> Product Originality Detector — Seller inventory insights.</p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/productDataApp.js"></script>
+	</body>
+</html>

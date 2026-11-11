@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Product Originality Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header container-fluid px-md-5">
+				<div class="branding-block">
+					<a class="navbar-brand" href="index.html">Product Originality Detector <span>using Blockchain</span></a>
+					<p class="tagline">Transfer authenticated goods to sellers with complete traceability.</p>
+				</div>
+				<div class="header-metrics">
+					<div class="status-pill status-pill--success">Transfer window active</div>
+					<div class="status-pill">Scheduled dispatches: 7</div>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar" id="ftco-navbar">
+		    <div class="container-fluid px-md-5">
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav m-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			      	<li class="nav-item"><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+		        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+		          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+
+			<main class="main-content">
+				<section class="hero container-fluid px-md-5">
+					<div class="hero-content">
+						<p class="eyebrow">Manufacturer → Seller transfer</p>
+						<h1>Assign secure products to verified sellers in seconds.</h1>
+						<p class="lead">Scan the product QR, capture seller codes, and record the transfer on-chain for transparent custody.</p>
+						<div class="hero-actions">
+							<a href="addProduct.html" class="btn-theme">Mint more products</a>
+							<a href="querySeller.html" class="btn-theme btn-theme--ghost">Review seller roster</a>
+						</div>
+						<ul class="hero-metrics">
+							<li><span>214</span>Transfers this week</li>
+							<li><span>98%</span>On-time deliveries</li>
+							<li><span>4</span>Pending approvals</li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<h3>Dispatch health</h3>
+						<ul>
+							<li>
+								<strong>Scan compliance</strong>
+								<div class="progress-bar"><span style="width: 83%"></span></div>
+								<p>Units scanned prior to shipment.</p>
+							</li>
+							<li>
+								<strong>Route readiness</strong>
+								<div class="progress-bar"><span style="width: 72%"></span></div>
+								<p>Seller confirmations received.</p>
+							</li>
+							<li>
+								<strong>Exception handling</strong>
+								<div class="progress-bar"><span style="width: 48%"></span></div>
+								<p>Cases under review.</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="feature-grid container-fluid px-md-5">
+					<div class="feature-card">
+						<span class="feature-icon fa fa-plus-square"></span>
+						<h3>Add products</h3>
+						<p>Register batches and mint QR codes before dispatching.</p>
+						<a href="addProduct.html">Create entries</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-users"></span>
+						<h3>Manage sellers</h3>
+						<p>Ensure seller details are complete and compliant.</p>
+						<a href="addSeller.html">Onboard seller</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-search"></span>
+						<h3>Audit transfers</h3>
+						<p>Query completed transfers for reconciliation.</p>
+						<a href="querySeller.html">View history</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-exclamation-circle"></span>
+						<h3>Resolve issues</h3>
+						<p>Track exception tickets and reassign shipments.</p>
+						<a href="seller.html">Open alerts</a>
+					</div>
+				</section>
+
+				<section class="form-panel container-fluid px-md-5">
+					<div class="glass-panel">
+						<h2 class="panel-title">Scan product QR</h2>
+						<p class="panel-subtitle">Use the scanner to auto-fill the product serial number before transfer.</p>
+						<div class="qr-wrapper text-center">
+							<div id="qr-reader" style="width:300px"></div>
+							<div id="qr-reader-results"></div>
+						</div>
+					</div>
+					<div class="glass-panel">
+						<h2 class="panel-title">Transfer details</h2>
+						<p class="panel-subtitle">Confirm the target seller code and complete the transfer.</p>
+						<div class="form-table">
+							<table>
+								<tr>
+									<td><label for="productSN">Product SN</label></td>
+									<td><input disabled class="form-control" id="productSN" name="productSN" type="text" /></td>
+									<td><label for="sellerCode">Seller Code</label></td>
+									<td><input class="form-control" id="sellerCode" name="sellerCode" type="text" /></td>
+								</tr>
+							</table>
+						</div>
+						<div class="form-actions text-center">
+							<button type="submit" class="btn btn-warning btn-register" id="register">Sell to Seller</button>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p> Product Originality Detector — Manufacturer transfers workspace.</p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/sellProductManufacturer.js"></script>
+		<script src="https://unpkg.com/html5-qrcode"></script>
+		<script>
+	var decodedText = "Enter Product SN";
+     function docReady(fn) {
+        // see if DOM is already available
+        if (document.readyState === "complete"
+           || document.readyState === "interactive") {
+	        // call on next available tick
+           setTimeout(fn, 1);
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    } 
+
+    docReady(function () {
+        var resultContainer = document.getElementById('qr-reader-results');
+        var lastResult, countResults = 0;
+        function onScanSuccess(decodedText, decodedResult) {
+            if (decodedText !== lastResult) {
+                ++countResults;
+                lastResult = decodedText;
+                // Handle on success condition with the decoded message.
+                var audio = new Audio('beep.wav');
+                audio.play();
+                // console.log(`Scan result ${decodedText}`, decodedResult);
+                document.getElementById('qr-reader-results').innerHTML=decodedText;
+				document.getElementById("productSN").value = decodedText;
+				//App.init(decodedText);
+                
+            }
+        }
+
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+    });
+  </script>
+  </body>
+</html>

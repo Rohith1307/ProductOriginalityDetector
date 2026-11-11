@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Product Originality Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/qr_code_box.css">
+
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header container-fluid px-md-5">
+				<div class="branding-block">
+					<a class="navbar-brand" href="index.html">Product Originality Detector <span>using Blockchain</span></a>
+					<p class="tagline">Generate tamper-proof identities for every product you ship.</p>
+				</div>
+				<div class="header-metrics">
+					<div class="status-pill status-pill--success">Minting online</div>
+					<div class="status-pill">Queued batches: 5</div>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar" id="ftco-navbar">
+		    <div class="container-fluid px-md-5">
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav m-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			      	<li class="nav-item"><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+		        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+		          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+
+			<main class="main-content">
+				<section class="hero container-fluid px-md-5">
+					<div class="hero-content">
+						<p class="eyebrow">Product registration</p>
+						<h1>Create secure blockchain entries for new inventory.</h1>
+						<p class="lead">Capture every detail, mint a QR code, and hand sellers the metadata they need to prove authenticity downstream.</p>
+						<div class="hero-actions">
+							<a href="manufacturer.html" class="btn-theme">Back to hub</a>
+							<a href="querySeller.html" class="btn-theme btn-theme--ghost">View seller network</a>
+						</div>
+						<ul class="hero-metrics">
+							<li><span>372</span>Products minted this month</li>
+							<li><span>14</span>Brands onboarded</li>
+							<li><span>0</span>Conflicts detected</li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<h3>Minting checklist</h3>
+						<ul>
+							<li>
+								<strong>Meta locked</strong>
+								<div class="progress-bar"><span style="width: 82%"></span></div>
+								<p>Ensure IDs, brands, and pricing are verified.</p>
+							</li>
+							<li>
+								<strong>QR issued</strong>
+								<div class="progress-bar"><span style="width: 68%"></span></div>
+								<p>Generate secure QR image per serial number.</p>
+							</li>
+							<li>
+								<strong>Lot distributed</strong>
+								<div class="progress-bar"><span style="width: 44%"></span></div>
+								<p>Assign batches to approved sellers.</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="feature-grid container-fluid px-md-5">
+					<div class="feature-card">
+						<span class="feature-icon fa fa-id-card"></span>
+						<h3>Seller onboarding</h3>
+						<p>Need a new distributor? Add them before assigning batches.</p>
+						<a href="addSeller.html">Add seller</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-random"></span>
+						<h3>Transfer lots</h3>
+						<p>Move verified units to sellers once QR minting completes.</p>
+						<a href="sellProductManufacturer.html">Transfer inventory</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-barcode"></span>
+						<h3>Query sellers</h3>
+						<p>Review who already carries your latest products.</p>
+						<a href="querySeller.html">Check directory</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-file-text"></span>
+						<h3>Compliance docs</h3>
+						<p>Keep certificates and warranty notes close to each batch.</p>
+						<a href="index.html">Documentation tips</a>
+					</div>
+				</section>
+
+				<section class="form-panel container-fluid px-md-5">
+					<div class="glass-panel">
+						<h2 class="panel-title">Add product details</h2>
+						<p class="panel-subtitle">Fill out product metadata exactly as it appears on physical packaging.</p>
+						<div class="form-table">
+							<table>
+								<tr>
+									<td>
+										<label for="manufacturerID">Manufacturer ID</label>
+									</td>
+									<td>
+										<input class="form-control" id="manufacturerID" name="Manufacturer ID" type="text" />
+									</td>
+									<td>
+										<label for="productName">Product Name</label>
+									</td>
+									<td>
+										<input class="form-control" id="productName" name="productName" type="text" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="productSN">Product SN</label>
+									</td>
+									<td>
+										<input class="form-control" id="productSN" name="productSN" type="text" />
+									</td>
+									<td>
+										<label for="productBrand">Product Brand</label>
+									</td>
+									<td>
+										<input class="form-control" id="productBrand" name="productBrand" type="text" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="productPrice">Product Price</label>
+									</td>
+									<td>
+										<input class="form-control" id="productPrice" name="productPrice" type="text" />
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<div class="form-actions text-center">
+							<button type="submit" class="btn btn-warning btn-register" id="register" onclick="fetchQR()">Add the Product</button>
+						</div>
+					</div>
+
+					<div class="glass-panel">
+						<h2 class="panel-title">QR code preview</h2>
+						<p class="panel-subtitle">Generate and download a secure QR to label each unit.</p>
+						<div class="qr-code">
+							<div class="text-center">
+								<img hidden id="imgQR" src="" alt="qr-code">
+							</div>
+							<div class="text-center qr-actions">
+								<button hidden type="submit" class="btn btn-warning" id="download" onclick="saveImage()">Download QR Code</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p> Product Originality Detector — Product registration workspace.</p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/productApp.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+	<script>
+	var src;
+	var qrValue;
+	function fetchQR(){
+		qrValue = document.getElementById('productSN').value;
+		qrImage = document.querySelector(".qr-code");
+		qrImageResult = qrImage.querySelector("img");
+		src = qrImageResult.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
+		
+
+		downloadQrImg = document.getElementById('imgQR');
+		downloadQrBtn = document.getElementById('download');
+		downloadQrImg.removeAttribute('hidden');
+		downloadQrBtn.removeAttribute('hidden');
+
+	}
+
+	function saveImage(){
+		saveAs(src,qrValue);
+		downloadQrImg.setAttribute('hidden', 'hidden');
+		downloadQrBtn.setAttribute('hidden', 'hidden');
+	}
+	</script>
+
+  </body>
+</html>

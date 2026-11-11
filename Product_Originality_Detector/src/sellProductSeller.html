@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Product Originality Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header container-fluid px-md-5">
+				<div class="branding-block">
+					<a class="navbar-brand" href="index.html">Product Originality Detector <span>using Blockchain</span></a>
+					<p class="tagline">Hand off authenticated goods directly to consumers.</p>
+				</div>
+				<div class="header-metrics">
+					<div class="status-pill status-pill--success">Retail sync live</div>
+					<div class="status-pill">Outbound orders: 18</div>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar" id="ftco-navbar">
+		    <div class="container-fluid px-md-5">
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav m-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			      	<li class="nav-item"><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+		        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+		          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+
+			<main class="main-content">
+				<section class="hero container-fluid px-md-5">
+					<div class="hero-content">
+						<p class="eyebrow">Seller → Consumer transfer</p>
+						<h1>Confirm every retail sale with verifiable custody.</h1>
+						<p class="lead">Scan inventory, capture consumer codes, and publish blockchain-backed receipts that buyers can trust.</p>
+						<div class="hero-actions">
+							<a href="queryProducts.html" class="btn-theme">Review inventory</a>
+							<a href="consumer.html" class="btn-theme btn-theme--ghost">Consumer portal</a>
+						</div>
+						<ul class="hero-metrics">
+							<li><span>412</span>Units sold this month</li>
+							<li><span>99%</span>Instant verification</li>
+							<li><span>6</span>Open escalations</li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<h3>Point-of-sale readiness</h3>
+						<ul>
+							<li>
+								<strong>QR scans</strong>
+								<div class="progress-bar"><span style="width: 90%"></span></div>
+								<p>Items scanned prior to checkout.</p>
+							</li>
+							<li>
+								<strong>Consumer IDs</strong>
+								<div class="progress-bar"><span style="width: 65%"></span></div>
+								<p>Linked loyalty or purchase profiles.</p>
+							</li>
+							<li>
+								<strong>Receipt sharing</strong>
+								<div class="progress-bar"><span style="width: 74%"></span></div>
+								<p>Blockchain receipts delivered to buyers.</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="feature-grid container-fluid px-md-5">
+					<div class="feature-card">
+						<span class="feature-icon fa fa-list"></span>
+						<h3>Inventory</h3>
+						<p>See which products are ready for consumer dispatch.</p>
+						<a href="queryProducts.html">Open list</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-id-badge"></span>
+						<h3>Consumer history</h3>
+						<p>Pull past purchases before fulfilling new orders.</p>
+						<a href="consumerPurchaseHistory.html">Check profiles</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-shield"></span>
+						<h3>Verification</h3>
+						<p>Let buyers confirm authenticity immediately.</p>
+						<a href="verifyProducts.html">Guide consumers</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-headset"></span>
+						<h3>Support</h3>
+						<p>Escalate issues with manufacturers if anomalies surface.</p>
+						<a href="manufacturer.html">Contact manufacturer</a>
+					</div>
+				</section>
+
+				<section class="form-panel container-fluid px-md-5">
+					<div class="glass-panel">
+						<h2 class="panel-title">Scan product QR</h2>
+						<p class="panel-subtitle">Use the scanner to capture the product serial number before checkout.</p>
+						<div class="qr-wrapper text-center">
+							<div id="qr-reader" style="width:300px"></div>
+							<div id="qr-reader-results"></div>
+						</div>
+					</div>
+					<div class="glass-panel">
+						<h2 class="panel-title">Consumer transfer</h2>
+						<p class="panel-subtitle">Confirm the buyer’s code to finalize the transaction.</p>
+						<div class="form-table">
+							<table>
+								<tr>
+									<td><label for="productSN">Product SN</label></td>
+									<td><input disabled class="form-control" id="productSN" name="productSN" type="text" /></td>
+									<td><label for="consumerCode">Consumer Code</label></td>
+									<td><input class="form-control" id="consumerCode" name="consumerCode" type="text" /></td>
+								</tr>
+							</table>
+						</div>
+						<div class="form-actions text-center">
+							<button type="submit" class="btn btn-warning btn-register" id="register">Sell to Consumer</button>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p> Product Originality Detector — Seller to consumer transfers.</p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/sellProductSeller.js"></script>
+		<script src="https://unpkg.com/html5-qrcode"></script>
+		<script>
+	var decodedText = "Enter Product SN";
+    function docReady(fn) {
+        // see if DOM is already available
+        if (document.readyState === "complete"
+            || document.readyState === "interactive") {
+            // call on next available tick
+            setTimeout(fn, 1);
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    docReady(function () {
+        var resultContainer = document.getElementById('qr-reader-results');
+        var lastResult, countResults = 0;
+        function onScanSuccess(decodedText, decodedResult) {
+            if (decodedText !== lastResult) {
+                ++countResults;
+                lastResult = decodedText;
+                // Handle on success condition with the decoded message.
+                var audio = new Audio('beep.wav');
+                audio.play();
+                // console.log(`Scan result ${decodedText}`, decodedResult);
+                document.getElementById('qr-reader-results').innerHTML=decodedText;
+				document.getElementById("productSN").value = decodedText;
+				//App.init(decodedText);
+                
+            }
+        }
+
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+    });
+  </script>
+  </body>
+</html>

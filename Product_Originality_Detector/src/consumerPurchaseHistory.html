@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Product Originality Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header container-fluid px-md-5">
+				<div class="branding-block">
+					<a class="navbar-brand" href="index.html">Product Originality Detector <span>using Blockchain</span></a>
+					<p class="tagline">See everything a consumer has verified in one secure timeline.</p>
+				</div>
+				<div class="header-metrics">
+					<div class="status-pill status-pill--success">History synced</div>
+					<div class="status-pill">Recent lookups: 64</div>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar" id="ftco-navbar">
+		    <div class="container-fluid px-md-5">
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav m-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			      	<li class="nav-item"><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+		        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+		          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+
+			<main class="main-content">
+				<section class="hero container-fluid px-md-5">
+					<div class="hero-content">
+						<p class="eyebrow">Consumer purchase history</p>
+						<h1>Audit every purchase a consumer has verified on-chain.</h1>
+						<p class="lead">Look up a consumer code to inspect which SKUs they’ve scanned, who sold them, and the manufacturer of record.</p>
+						<div class="hero-actions">
+							<a href="verifyProducts.html" class="btn-theme">Guide consumer verification</a>
+							<a href="seller.html" class="btn-theme btn-theme--ghost">Contact seller</a>
+						</div>
+						<ul class="hero-metrics">
+							<li><span>842</span>Consumers tracked</li>
+							<li><span>3.4</span>Avg. products per user</li>
+							<li><span>12</span>Active investigations</li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<h3>Trust indicators</h3>
+						<ul>
+							<li>
+								<strong>Verified sellers</strong>
+								<p>How many sellers this consumer typically buys from.</p>
+							</li>
+							<li>
+								<strong>Warranty coverage</strong>
+								<p>Check if recall notices exist for prior purchases.</p>
+							</li>
+							<li>
+								<strong>Alert history</strong>
+								<p>See when buyers marked items suspicious.</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="feature-grid container-fluid px-md-5">
+					<div class="feature-card">
+						<span class="feature-icon fa fa-qrcode"></span>
+						<h3>Verify items</h3>
+						<p>Help the consumer rescan questionable products.</p>
+						<a href="verifyProducts.html">Open verifier</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-shopping-cart"></span>
+						<h3>Seller directory</h3>
+						<p>Find which seller handled a consumer purchase.</p>
+						<a href="queryProducts.html">View inventory</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-envelope-open"></span>
+						<h3>Notify manufacturer</h3>
+						<p>Share purchase history snapshots with producers.</p>
+						<a href="manufacturer.html">Go to hub</a>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon fa fa-life-ring"></span>
+						<h3>Support case</h3>
+						<p>Log a ticket if a consumer flags a fake.</p>
+						<a href="seller.html">Raise issue</a>
+					</div>
+				</section>
+
+				<section class="form-panel container-fluid px-md-5">
+					<div class="glass-panel">
+						<h2 class="panel-title">Lookup consumer history</h2>
+						<p class="panel-subtitle">Enter the consumer code printed on purchase receipts.</p>
+						<div class="form-table">
+							<table>
+								<tr>
+									<td><label for="consumerCode">Consumer Code</label></td>
+									<td><input type="text" class="form-control" id="consumerCode" placeholder="Enter Consumer Code" name="consumerCode"></td>
+								</tr>
+							</table>
+						</div>
+						<div class="form-actions text-center">
+							<button type="submit" class="btn btn-warning btn-register" id="register">Get Products</button>
+						</div>
+					</div>
+					<div class="glass-panel">
+						<h2 class="panel-title">Products purchased</h2>
+						<p class="panel-subtitle">Each entry links the product SN, seller, and manufacturer.</p>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Product SN</th>
+										<th>Seller Code</th>
+										<th>Manufacturer Code</th>
+									</tr>
+								</thead>
+								<tbody id="logdata"></tbody>
+							</table>
+						</div>
+						<p class="text-center">Your address is <b id="add"></b></p>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p> Product Originality Detector — Consumer history console.</p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/consumerPurchaseHistory.js"></script>
+	</body>
+</html>
